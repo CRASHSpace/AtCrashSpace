@@ -16,6 +16,7 @@
 		D267AD331DF0F5C200A56476 /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D267AD321DF0F5C200A56476 /* UpdateViewController.swift */; };
 		D267AD351DF0FA3800A56476 /* dummy_data.xml in Resources */ = {isa = PBXBuildFile; fileRef = D267AD341DF0FA3800A56476 /* dummy_data.xml */; };
 		D267AD371DF0FAD100A56476 /* ButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D267AD361DF0FAD100A56476 /* ButtonModel.swift */; };
+		D27617FE1DFA462500E3EF9F /* ParseOrigXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27617FD1DFA462500E3EF9F /* ParseOrigXML.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		D267AD321DF0F5C200A56476 /* UpdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
 		D267AD341DF0FA3800A56476 /* dummy_data.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = dummy_data.xml; sourceTree = "<group>"; };
 		D267AD361DF0FAD100A56476 /* ButtonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonModel.swift; sourceTree = "<group>"; };
+		D27617FD1DFA462500E3EF9F /* ParseOrigXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseOrigXML.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				D267AD241DF0DEC500A56476 /* Main.storyboard */,
 				D267AD341DF0FA3800A56476 /* dummy_data.xml */,
 				D267AD361DF0FAD100A56476 /* ButtonModel.swift */,
+				D27617FD1DFA462500E3EF9F /* ParseOrigXML.swift */,
 				D267AD321DF0F5C200A56476 /* UpdateViewController.swift */,
 				D267AD271DF0DEC500A56476 /* Assets.xcassets */,
 				D267AD291DF0DEC500A56476 /* LaunchScreen.storyboard */,
@@ -151,6 +154,7 @@
 			files = (
 				D267AD231DF0DEC500A56476 /* SecondViewController.swift in Sources */,
 				D267AD1F1DF0DEC500A56476 /* AppDelegate.swift in Sources */,
+				D27617FE1DFA462500E3EF9F /* ParseOrigXML.swift in Sources */,
 				D267AD371DF0FAD100A56476 /* ButtonModel.swift in Sources */,
 				D267AD211DF0DEC500A56476 /* FirstViewController.swift in Sources */,
 				D267AD331DF0F5C200A56476 /* UpdateViewController.swift in Sources */,
@@ -315,6 +319,7 @@
 				D267AD311DF0DEC500A56476 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

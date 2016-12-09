@@ -10,6 +10,7 @@ import UIKit
 
 class UpdateViewController: UIViewController {
     
+    @IBOutlet var timeSetPicker: UIPickerView!
     
     @IBAction func addTimeButtonAction(_ sender: Any) {
         let timeLeft:String = String(timeToAdd.countDownDuration)
