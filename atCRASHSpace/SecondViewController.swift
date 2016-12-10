@@ -9,11 +9,10 @@
 import UIKit
 
 
-
-
 class SecondViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var bph = ButtonPressHistory()
+    @IBOutlet var buttonPressHistoryTable: UITableView!
+    
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return bph.data.count
@@ -27,19 +26,14 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         
         let row = indexPath.row
         
-        let datetime = bph.data[row].pubdate
-        //let datetime = NSDate()
-        //let infolump = bph.data[row].infolump
-        
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        formatter.timeStyle = .medium
-        //let stringDate: String = formatter.string(from: datetime as Date)
+        let datetime = bph.data[row].date_epoch
+        let message = bph.data[row].msg
+        let id = bph.data[row].id
+        let min_added = bph.data[row].diff_mins
 
         
-        cell.textLabel?.text = datetime
-        //cell.detailTextLabel?.text = infolump
-        
+        cell.textLabel?.text = message //"Boo!"
+        cell.detailTextLabel?.text = "\(id) added \(min_added) at \(datetime)" //"EEEk!"
         return cell
     }
     
@@ -47,28 +41,15 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-
-        //test data
-        //loadTestData()
-        
-        
-        //bph.loadRemoteXMLData(urlString: "https://crashspacela.com/sign/feed/")
-        bph.loadRemoteXMLData(urlString: "dummy_data.xml")
+       
+        print("History View Loaded")
+        //self.buttonPressHistoryTable.reloadData()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    func loadTestData() {
-        bph.addRow(row: ButtonPress(pubdate:"Thu, 01 Dec 2016 11:38:28 -0800", message:"thisisatest", infolump:"todtest - iphoneapp - 1mins.", link:"http://crashspacela.com/sign/"))
-        bph.addRow(row: ButtonPress(pubdate:"Tue, 22 Nov 2016 18:05:38 -0800", message:"Someone at the space!", infolump:"Meeting Room - update - 60mins.", link:"http://crashspacela.com/sign/"))
-        
-    }
-    
-
 
 }
 
