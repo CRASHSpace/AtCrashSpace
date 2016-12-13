@@ -1,137 +1,141 @@
- [
-  {
-  "type": "update",
-  "id": "todtest",
-  "msg": "hello tst ing",
-  "diff_mins_max": 23,
-  "description": "todtest - update - 23 mins.",
-  "date": "Thu, 08 Dec 2016 19:01:18 -0800",
-  "date_epoch": "1481252478"
-  },
-  {
-  "type": "update",
-  "id": "todtest",
-  "msg": "hello tst ing",
-  "diff_mins_max": 60,
-  "description": "todtest - update - 60 mins.",
-  "date": "Thu, 08 Dec 2016 19:01:05 -0800",
-  "date_epoch": "1481252465"
-  },
-  {
-  "type": "iphoneapp",
-  "id": "todtest",
-  "msg": "thisisatest",
-  "diff_mins_max": 1,
-  "description": "todtest - iphoneapp - 1 mins.",
-  "date": "Thu, 01 Dec 2016 11:38:28 -0800",
-  "date_epoch": "1480621108"
-  },
-  {
-  "type": "iphoneapp",
-  "id": "todtest",
-  "msg": "thisisatest",
-  "diff_mins_max": 1,
-  "description": "todtest - iphoneapp - 1 mins.",
-  "date": "Thu, 01 Dec 2016 11:38:22 -0800",
-  "date_epoch": "1480621102"
-  },
-  {
-  "type": "iphoneapp",
-  "id": "todtest",
-  "msg": "thisisatest",
-  "diff_mins_max": 1,
-  "description": "todtest - iphoneapp - 1 mins.",
-  "date": "Thu, 01 Dec 2016 11:38:20 -0800",
-  "date_epoch": "1480621100"
-  },
-  {
-  "type": "iphoneapp",
-  "id": "todtest",
-  "msg": "thisisatest",
-  "diff_mins_max": 1,
-  "description": "todtest - iphoneapp - 1 mins.",
-  "date": "Thu, 01 Dec 2016 11:37:18 -0800",
-  "date_epoch": "1480621038"
-  },
-  {
-  "type": "update",
-  "id": "Meeting Room",
-  "msg": "Someone at the space!",
-  "diff_mins_max": 60,
-  "description": "Meeting Room - update - 60 mins.",
-  "date": "Sat, 26 Nov 2016 17:01:01 -0800",
-  "date_epoch": "1480208461"
-  },
-  {
-  "type": "update",
-  "id": "Meeting Room",
-  "msg": "Someone at the space!",
-  "diff_mins_max": 60,
-  "description": "Meeting Room - update - 60 mins.",
-  "date": "Tue, 22 Nov 2016 19:38:31 -0800",
-  "date_epoch": "1479872311"
-  },
-  {
-  "type": "update",
-  "id": "Meeting Room",
-  "msg": "Someone at the space!",
-  "diff_mins_max": 60,
-  "description": "Meeting Room - update - 60 mins.",
-  "date": "Tue, 22 Nov 2016 18:05:38 -0800",
-  "date_epoch": "1479866738"
-  },
-  {
-  "type": "update",
-  "id": "Meeting Room",
-  "msg": "Someone at the space!",
-  "diff_mins_max": 60,
-  "description": "Meeting Room - update - 60 mins.",
-  "date": "Mon, 21 Nov 2016 19:34:27 -0800",
-  "date_epoch": "1479785667"
-  },
-  {
-  "type": "update",
-  "id": "Meeting Room",
-  "msg": "Someone at the space!",
-  "diff_mins_max": 60,
-  "description": "Meeting Room - update - 60 mins.",
-  "date": "Sun, 20 Nov 2016 22:19:27 -0800",
-  "date_epoch": "1479709167"
-  },
-  {
-  "type": "update",
-  "id": "Meeting Room",
-  "msg": "Someone at the space!",
-  "diff_mins_max": 60,
-  "description": "Meeting Room - update - 60 mins.",
-  "date": "Sun, 20 Nov 2016 21:13:50 -0800",
-  "date_epoch": "1479705230"
-  },
-  {
-  "type": "update",
-  "id": "Meeting Room",
-  "msg": "Someone at the space!",
-  "diff_mins_max": 60,
-  "description": "Meeting Room - update - 60 mins.",
-  "date": "Sun, 20 Nov 2016 19:40:07 -0800",
-  "date_epoch": "1479699607"
-  },
-  {
-  "type": "update",
-  "id": "Meeting Room",
-  "msg": "Someone at the space!",
-  "diff_mins_max": 60,
-  "description": "Meeting Room - update - 60 mins.",
-  "date": "Sun, 20 Nov 2016 19:33:17 -0800",
-  "date_epoch": "1479699197"
-  },
-  {
-  "type": "update",
-  "id": "Meeting Room",
-  "msg": "Someone at the space!",
-  "diff_mins_max": 60,
-  "description": "Meeting Room - update - 60 mins.",
-  "date": "Sun, 20 Nov 2016 14:35:00 -0800",
-  "date_epoch": "1479681300"
-  }
-  ]
+{
+    "is_open": true,
+    "minutes_left": 12.583333333333,
+    "button_presses": [
+                       {
+                       "type": "update",
+                       "id": "todtest",
+                       "msg": "more smooches to carlyn",
+                       "diff_mins_max": 23,
+                       "description": "todtest - update - 23 mins.",
+                       "date": "Mon, 12 Dec 2016 15:38:32 -0800",
+                       "date_epoch": "1481585912"
+                       },
+                       {
+                       "type": "update",
+                       "id": "todtest",
+                       "msg": "smooches to carlyn",
+                       "diff_mins_max": 23,
+                       "description": "todtest - update - 23 mins.",
+                       "date": "Fri, 09 Dec 2016 18:55:26 -0800",
+                       "date_epoch": "1481338526"
+                       },
+                       {
+                       "type": "update",
+                       "id": "todtest",
+                       "msg": "hello tst ing",
+                       "diff_mins_max": 23,
+                       "description": "todtest - update - 23 mins.",
+                       "date": "Thu, 08 Dec 2016 19:01:18 -0800",
+                       "date_epoch": "1481252478"
+                       },
+                       {
+                       "type": "update",
+                       "id": "todtest",
+                       "msg": "hello tst ing",
+                       "diff_mins_max": 60,
+                       "description": "todtest - update - 60 mins.",
+                       "date": "Thu, 08 Dec 2016 19:01:05 -0800",
+                       "date_epoch": "1481252465"
+                       },
+                       {
+                       "type": "iphoneapp",
+                       "id": "todtest",
+                       "msg": "thisisatest",
+                       "diff_mins_max": 1,
+                       "description": "todtest - iphoneapp - 1 mins.",
+                       "date": "Thu, 01 Dec 2016 11:38:28 -0800",
+                       "date_epoch": "1480621108"
+                       },
+                       {
+                       "type": "iphoneapp",
+                       "id": "todtest",
+                       "msg": "thisisatest",
+                       "diff_mins_max": 1,
+                       "description": "todtest - iphoneapp - 1 mins.",
+                       "date": "Thu, 01 Dec 2016 11:38:22 -0800",
+                       "date_epoch": "1480621102"
+                       },
+                       {
+                       "type": "iphoneapp",
+                       "id": "todtest",
+                       "msg": "thisisatest",
+                       "diff_mins_max": 1,
+                       "description": "todtest - iphoneapp - 1 mins.",
+                       "date": "Thu, 01 Dec 2016 11:38:20 -0800",
+                       "date_epoch": "1480621100"
+                       },
+                       {
+                       "type": "iphoneapp",
+                       "id": "todtest",
+                       "msg": "thisisatest",
+                       "diff_mins_max": 1,
+                       "description": "todtest - iphoneapp - 1 mins.",
+                       "date": "Thu, 01 Dec 2016 11:37:18 -0800",
+                       "date_epoch": "1480621038"
+                       },
+                       {
+                       "type": "update",
+                       "id": "Meeting Room",
+                       "msg": "Someone at the space!",
+                       "diff_mins_max": 60,
+                       "description": "Meeting Room - update - 60 mins.",
+                       "date": "Sat, 26 Nov 2016 17:01:01 -0800",
+                       "date_epoch": "1480208461"
+                       },
+                       {
+                       "type": "update",
+                       "id": "Meeting Room",
+                       "msg": "Someone at the space!",
+                       "diff_mins_max": 60,
+                       "description": "Meeting Room - update - 60 mins.",
+                       "date": "Tue, 22 Nov 2016 19:38:31 -0800",
+                       "date_epoch": "1479872311"
+                       },
+                       {
+                       "type": "update",
+                       "id": "Meeting Room",
+                       "msg": "Someone at the space!",
+                       "diff_mins_max": 60,
+                       "description": "Meeting Room - update - 60 mins.",
+                       "date": "Tue, 22 Nov 2016 18:05:38 -0800",
+                       "date_epoch": "1479866738"
+                       },
+                       {
+                       "type": "update",
+                       "id": "Meeting Room",
+                       "msg": "Someone at the space!",
+                       "diff_mins_max": 60,
+                       "description": "Meeting Room - update - 60 mins.",
+                       "date": "Mon, 21 Nov 2016 19:34:27 -0800",
+                       "date_epoch": "1479785667"
+                       },
+                       {
+                       "type": "update",
+                       "id": "Meeting Room",
+                       "msg": "Someone at the space!",
+                       "diff_mins_max": 60,
+                       "description": "Meeting Room - update - 60 mins.",
+                       "date": "Sun, 20 Nov 2016 22:19:27 -0800",
+                       "date_epoch": "1479709167"
+                       },
+                       {
+                       "type": "update",
+                       "id": "Meeting Room",
+                       "msg": "Someone at the space!",
+                       "diff_mins_max": 60,
+                       "description": "Meeting Room - update - 60 mins.",
+                       "date": "Sun, 20 Nov 2016 21:13:50 -0800",
+                       "date_epoch": "1479705230"
+                       },
+                       {
+                       "type": "update",
+                       "id": "Meeting Room",
+                       "msg": "Someone at the space!",
+                       "diff_mins_max": 60,
+                       "description": "Meeting Room - update - 60 mins.",
+                       "date": "Sun, 20 Nov 2016 19:40:07 -0800",
+                       "date_epoch": "1479699607"
+                       }
+                       ]
+}

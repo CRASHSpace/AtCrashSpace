@@ -32,16 +32,13 @@ extension ButtonPress {
                 return nil
         }
         
-        print(dateString)
-        //Sun, 20 Nov 2016 14:35:00 -0800
         let formatter = DateFormatter()
         formatter.dateFormat = "E, dd MMM yyyy HH:mm:ss Z"
         formatter.timeZone = NSTimeZone(name: "PST") as TimeZone!
-        //let dateAsDate = formatter.date(from: dateString)
         guard let dateAsDate = formatter.date(from: dateString) else {
             print("Not the expected date format")
             return nil
-       }
+        }
         
         self.id = id
         self.msg = msg
@@ -57,68 +54,22 @@ extension ButtonPress {
 class ButtonPressHistory:NSObject, XMLParserDelegate {
     
     var data:[ButtonPress] = []
+    var isOpen: Bool = false
+    var minutesLeft: Int = 0
     
     func addRow(row:ButtonPress) {
         data += [row]
     }
     
     
-//    func loadRemoteJSONData(urlString:String) {
-//        guard let myURL = NSURL(string:urlString) else {
-//            print("URL not defined properly")
-//            return
-//        }
-        
-        
-//        URLSession.shared.dataTask(with:myURL) { (data, response, error) in
-//            if error != nil {
-//                print("oh no \(error)")
-//            } else {
-//                print("hi there; we got server response")
-//                do {
-//                    
-//                    let parsedData = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [Any]
-//                    
-//                    print("all items:");
-//                    print("-------------");
-//                    
-//                    for item in parsedData {
-//                        let item = item as! [String:Any] // recast as array w/ key:string, val:any
-//                        let id = item["id"] as! String
-//                        let msg = item["msg"] as! String
-//                        let diff_mins = item["diff_mins_max"] as! Int
-//                        print("  item: id:\(id), msg:\(msg), diff_mins:\(diff_mins)")
-//                    }
-//                    
-//                    // from https://developer.apple.com/swift/blog/?id=37
-//                    // convert json-ish data to struct, using extension
-//                    for item in parsedData {
-//                        let item = item as! [String:Any]
-//                        if let buttonPress = ButtonPress(json: item) {
-//                            self.append(buttonPress)
-//                        }
-//                    }
-//                    
-//                    print("\nbuttonPress structs");
-//                    print("-------------");
-//                    
-//                    for b in self {
-//                        print("buttonPress: \(b.id) '\(b.msg)' for \(b.diff_mins) minutes at \(b.date)")
-//                    }
-//                    
-//                } catch let error as NSError {
-//                    print(error)
-//                }
-//            }
-//            
-//            }.resume()
-
-//    }
     
     func loadTestJSONData() {
         let file = "dummy_data" //this is the file. we will write to and read from it
         
         let jsonFile = Bundle.main.url(forResource: file, withExtension: "json")!
+        //let urlString = "https://crashspacela.com/sign2/json/"
+        //let url = URL(string: urlString)
+        
         print("getting \(jsonFile)")
         
         let task = URLSession.shared.dataTask(with:jsonFile) { (data, response, error) in
@@ -128,37 +79,43 @@ class ButtonPressHistory:NSObject, XMLParserDelegate {
                 print("hi there; we got data")
                 do {
                     
-                    let parsedData = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [Any]
-                    
-                    print("all items:");
-                    print("-------------");
-                    print(parsedData)
-                    
-                    
-//                    for item in parsedData {
-//                        let item = item as! [String:Any] // recast as array w/ key:string, val:any
-//                        let id = item["id"] as! String
-//                        let msg = item["msg"] as! String
-//                        let diff_mins = item["diff_mins_max"] as! Int
-//                        print("  item: id:\(id), msg:\(msg), diff_mins:\(diff_mins)")
-//                    }
-                    
-                    // from https://developer.apple.com/swift/blog/?id=37
-                    // convert json-ish data to struct, using extension
-                    for item in parsedData {
-                        let item = item as! [String:Any]
-                        if let buttonPress = ButtonPress(json: item) {
-                            self.addRow(row: buttonPress)
-                        }
+                    let fullData = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String:Any]
+
+                    guard let tempStatus = fullData["is_open"] as! Bool? else {
+                            print("No status datas")
+                            return
                     }
                     
-                    print("\nbuttonPress structs");
-                    print("-------------");
+                    guard let tempMinLeft = fullData["minutes_left"] as! Double? else {
+                        print("No time data")
+                        return
+                    }
                     
-//                    for b in self {
-//                        print("buttonPress: \(b.id) '\(b.msg)' for \(b.diff_mins) minutes at \(b.date)")
+                    self.isOpen = tempStatus
+                    print(tempMinLeft)
+                    
+                    print(self.isOpen)
+                    
+//                    
+//                    
+//                    if case let self.minutesLeft = fullData["minutes_left"] as? Double {
+//                        print("minutesLeft value: \(minutesLeft)")
 //                    }
+
                     
+                    // convert json-ish data to struct, using extension
+                    
+                    if let buttonPressesData = fullData["button_presses"] as? [Any] {
+                        print("parsing buttonPress array...")
+                        
+                        
+                        for item in buttonPressesData {
+                            let item = item as! [String:Any]
+                            if let buttonPress = ButtonPress(json: item) {
+                                self.addRow(row: buttonPress)
+                            }
+                        }
+                    }
 
                     
                 } catch { print("doh.")}
@@ -166,6 +123,6 @@ class ButtonPressHistory:NSObject, XMLParserDelegate {
         }
         task.resume()
     }
-
+    
     
 }
