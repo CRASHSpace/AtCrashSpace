@@ -55,7 +55,7 @@ class ButtonPressHistory:NSObject, XMLParserDelegate {
     
     var data:[ButtonPress] = []
     var isOpen: Bool = false
-    var minutesLeft: Int = 0
+    var minutesLeft: Double = 0
     
     func addRow(row:ButtonPress) {
         data += [row]
@@ -92,18 +92,10 @@ class ButtonPressHistory:NSObject, XMLParserDelegate {
                     }
                     
                     self.isOpen = tempStatus
-                    print(tempMinLeft)
+                    self.minutesLeft = tempMinLeft
                     
-                    print(self.isOpen)
-                    
-//                    
-//                    
-//                    if case let self.minutesLeft = fullData["minutes_left"] as? Double {
-//                        print("minutesLeft value: \(minutesLeft)")
-//                    }
-
-                    
-                    // convert json-ish data to struct, using extension
+                    //print(self.isOpen)
+                    //print(self.minutesLeft)
                     
                     if let buttonPressesData = fullData["button_presses"] as? [Any] {
                         print("parsing buttonPress array...")
