@@ -54,6 +54,7 @@ extension ButtonPress {
 class ButtonPressHistory:NSObject, XMLParserDelegate {
     
     var data:[ButtonPress] = []
+    var isLoaded: Bool = false
     var isOpen: Bool = false
     var minutesLeft: Double = 0
     
@@ -64,6 +65,7 @@ class ButtonPressHistory:NSObject, XMLParserDelegate {
     
     
     func loadTestJSONData() {
+        isLoaded = false
         let file = "dummy_data" //this is the file. we will write to and read from it
         
         let jsonFile = Bundle.main.url(forResource: file, withExtension: "json")!
@@ -112,8 +114,10 @@ class ButtonPressHistory:NSObject, XMLParserDelegate {
                     
                 } catch { print("doh.")}
             }
+            self.isLoaded = true
         }
         task.resume()
+        
     }
     
     
