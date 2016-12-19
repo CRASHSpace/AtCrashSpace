@@ -17,9 +17,9 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        bph.loadTestJSONData()
+        bph.loadTestJSONData(UIUpdateFunc: refreshLabels)
         print("gonna change labels")
-        refreshLabels()
+        //refreshLabels()
         
         
     }
@@ -31,19 +31,26 @@ class FirstViewController: UIViewController {
 
     
     func refreshLabels() {
+        print("I see you.")
         if bph.isLoaded {
-        if bph.isOpen {
-            statusLabel.text = "OPEN!"
-            minutesLeftLabel.text = "and will be for ()"
-        } else {
-            statusLabel.text = "CLOSED"
-        }
+            if bph.isOpen {
+                statusLabel.text = "OPEN!"
+                minutesLeftLabel.text = String(format: "and will be for %.0f minutes more.", bph.minutesLeft)
+            } else {
+                statusLabel.text = "CLOSED"
+            }
         } else {
             statusLabel.text = "-----"
             minutesLeftLabel.text = "please wait while data loads"
         }
     }
-    
+
+    func refreshTest() {
+        print("I see you.")
+        print(bph.isOpen)
+        statusLabel.text = "OPEN!"
+    }
+
     
 }
 

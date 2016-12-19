@@ -64,7 +64,7 @@ class ButtonPressHistory:NSObject, XMLParserDelegate {
     
     
     
-    func loadTestJSONData() {
+    func loadTestJSONData(UIUpdateFunc: @escaping () -> Void) {
         isLoaded = false
         let file = "dummy_data" //this is the file. we will write to and read from it
         
@@ -97,7 +97,7 @@ class ButtonPressHistory:NSObject, XMLParserDelegate {
                     self.minutesLeft = tempMinLeft
                     
                     //print(self.isOpen)
-                    //print(self.minutesLeft)
+                    //print(String(format: "hex string: %.0f", self.minutesLeft))
                     
                     if let buttonPressesData = fullData["button_presses"] as? [Any] {
                         print("parsing buttonPress array...")
@@ -109,12 +109,14 @@ class ButtonPressHistory:NSObject, XMLParserDelegate {
                                 self.addRow(row: buttonPress)
                             }
                         }
+                          self.isLoaded = true
                     }
-
+                    
+                    DispatchQueue.main.sync(execute: UIUpdateFunc)
                     
                 } catch { print("doh.")}
             }
-            self.isLoaded = true
+          
         }
         task.resume()
         
